@@ -1,0 +1,43 @@
+{
+  "name": "coba-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "fix-imports": "node fix-imports.js"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@stream-io/node-sdk": "^0.6.7",
+    "@stream-io/video-react-sdk": "^1.21.0",
+    "@tanstack/react-query": "^5.90.1",
+    "@types/jsonwebtoken": "^9.0.10",
+    "jose": "^6.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.544.0",
+    "ml-kmeans": "^7.0.0",
+    "next": "^15.5.2",
+    "qr-scanner": "1.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-feather": "^2.0.10",
+    "react-hook-form": "^7.62.0",
+    "react-icons": "^5.5.0",
+    "recharts": "^3.6.0",
+    "zod": "^4.1.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
