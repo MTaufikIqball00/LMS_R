@@ -1,7 +1,7 @@
 import "server-only";
 import { jwtVerify } from "jose";
 
-const secretKey = process.env.JWT_SECRET_KEY;
+const secretKey = process.env.JWT_SECRET || process.env.JWT_SECRET_KEY;
 const encodedKey = new TextEncoder().encode(secretKey);
 
 export async function verifyJwtToken(token: string) {

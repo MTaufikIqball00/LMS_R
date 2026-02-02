@@ -68,7 +68,10 @@ export async function middleware(request: NextRequest) {
   // --- Main redirect logic for authenticated users ---
   if (isAuthenticated) {
     // 1. Redirect logged-in users away from public pages
-    if (isPublicPath) {
+    // 1. Redirect logged-in users away from public pages
+    // EXCEPTION: Do not redirect API routes (like /api/login) to dashboard.
+    // This allows the frontend to receive the actual API response (JSON) instead of an HTML redirect.
+    if (isPublicPath && !pathname.startsWith("/api")) {
       let redirectUrl = "/dashboard"; // Default for students
       if (session.role === "teacher") redirectUrl = "/teacher/dashboard";
       if (session.role === "admin_langganan") redirectUrl = "/admin/langganan";
